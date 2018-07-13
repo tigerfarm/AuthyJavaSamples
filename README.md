@@ -8,8 +8,8 @@ Java programs to send requests to the Twilio Account Security APIs: 2FA and Phon
     In your environment, set your Authy required variables.
     Run AuthyJavaSamples.java to echo the environment variables that are used by Authy Java sample programs.
 
-Note, to set the environment variables for NetBeans, I have a shell script that sets the variables then starts NetBeans.
-This insures the the environment variables are available in NetBeans.
+When using NetBeans, use shell script that sets the variables then starts the IDE.
+This insures the the environment variables are available for the programs that are run in the IDE.
 
 ````
 $ cat ~/nb.sh 
