@@ -33,7 +33,13 @@ When it is run, it sends a phone verification OTP to: AUTHY_PHONE_COUNTRYCODE + 
 The phone receives the OTP.
 In PhoneVerification.java, you are prompted to enter the passcode.
 Enter the OTP. A request is sent to verify the entered passcode.
-PhoneVerification.java, receives and displays the result: valid or not.
+PhoneVerification.java receives and displays the result: valid or not.
+````
+````
+PhoneVerificationVerify.java:
+When it is run, you are prompted to enter a one time passcode (OTP) that was sent to: AUTHY_PHONE_COUNTRYCODE + AUTHY_PHONE_NUMBER1.
+Enter the OTP. A request is sent to verify the entered passcode.
+PhoneVerificationVerify.java receives and displays the result: valid or not.
 ````
 SendMsg1.java is a sample program to send an SMS message for testing.
 
