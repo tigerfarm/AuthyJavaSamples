@@ -2,7 +2,7 @@
 
 Java programs to send requests to the Twilio Account Security APIs: 2FA and Phone Verification.
 
-To get started, start with Phone Verification.
+To get started, start with Phone Verification:
 
     Create a Twilio account, a free Trial works fine (https://twilio.com/console).
     In the Authy section of the Twilio Console, follow the Get Started steps to make your account 2FA enabled, and enter an application (Friendly name) to create an API key.
