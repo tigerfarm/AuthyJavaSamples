@@ -15,7 +15,7 @@ This insures the the environment variables are available in NetBeans.
 $ cat ~/nb.sh 
 export ACCOUNT_SID=your_account_sid
 export AUTH_TOKEN=your_account_auth_token
-export AUTHY_ID=sample_user_authy_id (example: 30012357
+export AUTHY_ID=sample_user_authy_id (example: 30012357)
 export AUTHY_ID_EMAIL=sample_user_email_address
 export AUTHY_PHONE_COUNTRYCODE=+1
 export AUTHY_PHONE_NUMBER1=2223331234
@@ -27,15 +27,14 @@ export PHONE_NUMBER2=+12223332222
 You can check the program before running it, to know which variables are required, for which program.
 
 ## Authy Java Programs That Use the Authy Helper Library
-
+````
 PhoneVerification.java:
-Set PARAM_COUNTRYCODE and PARAM_PHONENUMBER to your mobile phone number.
-Run PhoneVerification.java, which sends a Phone Verification OTP.
+When it is run, it sends a phone verification OTP to: AUTHY_PHONE_COUNTRYCODE + AUTHY_PHONE_NUMBER1.
 The phone receives the OTP.
 In PhoneVerification.java, you are prompted to enter the passcode.
 Enter the OTP. A request is sent to verify the entered passcode.
 PhoneVerification.java, receives and displays the result: valid or not.
-
+````
 SendMsg1.java is a sample program to send an SMS message for testing.
 
 ## Authy Java Programs Without Using the Authy Helper Library
