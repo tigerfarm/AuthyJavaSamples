@@ -2,11 +2,19 @@
 
 Java programs to send requests to the Twilio Account Security APIs: 2FA and Phone Verification.
 
-    To get started, start with Phone Verification.
+To get started, start with Phone Verification.
+
     Create a Twilio account, a free Trial works fine (https://twilio.com/console).
     In the Authy section of the Twilio Console, follow the Get Started steps to make your account 2FA enabled, and enter an application (Friendly name) to create an API key.
     In your environment, set your Authy required variables.
-    Run AuthyJavaSamples.java to echo the environment variables that are used by Authy Java sample programs.
+    In your IDE, create a project.
+    Include the Libraries:
+       Java Helper Library: twilio-x.x.x-jar-with-dependencies.jar
+          Download link from: https://www.twilio.com/docs/libraries/java
+       Authy and JSON libraries: authy-java-1.2.0.jar and json-20150729.jar
+          Download from: https://jar-download.com/explore-java-source-code.php?a=authy-java&g=com.authy&v=1.2.0&downloadable=1
+    Include and run: AuthyJavaSamples.java. It will echo the environment variables that are used by Authy Java sample programs.
+    Include and run: PhoneVerification.java. It will send an OTP and prompt you for the code to be verified.
 
 When using NetBeans, use shell script that sets the variables then starts the IDE.
 This insures the the environment variables are available for the programs that are run in the IDE.
