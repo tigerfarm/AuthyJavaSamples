@@ -1,4 +1,7 @@
 /*
+To run:
+java -cp AuthyJavaSamples.jar authyjavasamples.PhoneVerification
+
 Based on:
     https://www.twilio.com/docs/verify
     https://www.twilio.com/docs/verify/quickstart/java-servlets

@@ -1,3 +1,6 @@
+// To run:
+// java -cp AuthyJavaSamples.jar authyjavasamples.AuthyJavaSamples
+//
 package authyjavasamples;
 
 public class AuthyJavaSamples {
