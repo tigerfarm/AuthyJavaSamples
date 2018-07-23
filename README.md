@@ -2,6 +2,49 @@
 
 Java programs to send requests to the Twilio Account Security APIs: 2FA and Phone Verification.
 
+## Quick Test
+
+Download this project's zip into a working directory and unzip it.
+Edit authVars.sh to have your values.
+Run the following commands.
+The first command (source authVars.sh) sets your environment variables that the Java programs will use.
+The next command (PhoneVerification) sends an OTP to your mobile phone and then prompts you for the code. For test purposes, enter a incorrect value.
+The third command (PhoneVerificationVerify) prompts for the OTP. Enter the correct code to see the correct result.
+````
+$ source authVars.sh
++++ Authy Java Samples.++ Echo environment variables:
++ PhoneVerificationService/main, SID:                     your_account_SID
++ PhoneVerificationService/main, AUTH_TOKEN:              your_account_auth_token
++ PhoneVerificationService/main, AUTHY_ID:                your_sample_authy_id(example: 430012345)
++ PhoneVerificationService/main, AUTHY_ID_EMAIL:          your_sample_authy_email_address
++ PhoneVerificationService/main, PHONE_NUMBER1:           your_account_phone_number1(example: +16501231111)
++ PhoneVerificationService/main, PHONE_NUMBER2:           your_account_phone_number2(example: +16501232222)
++ PhoneVerificationService/main, AUTHY_API_KEY:           your_account_authy_API_key
++ PhoneVerificationService/main, AUTHY_PHONE_COUNTRYCODE: your_country_code(example: +1)
++ PhoneVerificationService/main, AUTHY_PHONE_NUMBER1:     your_mobile_phone_number(example: 6501231234)
+++ Exit.
+
+$ java -cp AuthyJavaSamples.jar authyjavasamples.PhoneVerification
++++ Start.
+++ Send the one time passcode (OTP) to: 6501231234
++ sendOTP, success: Text message sent to +1 650-123-1234.
+-------------------------
+++ Enter the received OTP (or exit)> 3215
+- logAndThrow, verifyOTP, Error: Verification code is incorrect
+
++++ Exit.
+
+$ java -cp AuthyJavaSamples.jar authyjavasamples.PhoneVerificationVerify
++++ Start.
+-------------------------
+++ Enter the received OTP (or exit)> 3214
++ verifyOTP, success: Verification code is correct.
+
++++ Exit.
+````
+
+Note, authVars.sh runs the AuthyJavaSamples.java program which echos the environment values in authVars.sh.
+
 To get started, start with Phone Verification:
 
     Create a Twilio account, a free Trial works fine (https://twilio.com/console).
