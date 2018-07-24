@@ -89,8 +89,6 @@ public class PhoneVerification {
         } catch (Exception e) {
             System.out.println("- Exception caught.");
         }
-        System.out.println("");
-        System.out.println("+++ Exit.");
     }
 
 }

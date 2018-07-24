@@ -45,6 +45,31 @@ $ java -cp AuthyJavaSamples.jar authyjavasamples.PhoneVerificationVerify
 
 Note, authVars.sh runs the AuthyJavaSamples.java program which echos the environment values in authVars.sh.
 
+## Reports
+
+https://www.twilio.com/blog/2018/02/new-webhooks-and-reporting-for-twilio-authy-2fa-and-verify-phone-verification-apis.html
+
+Samples, SMS events:
+````
+curl -g "https://api.authy.com/protected/json/reporting/events?query[objects.phone_verification.s_via][eq]=sms&query[time][gte]=2018-07-20T00:00:00.000Z" \
+-H "X-Authy-API-Key: $REPORTING_AUTHY_API_KEY"
+````
+Started:
+````
+curl -g "https://api.authy.com/protected/json/reporting/date_histogram?report[phone_verification_started][event][eq]=phone_verification_started&interval=hour&page=1" \
+-H "X-Authy-API-Key: $REPORTING_AUTHY_API_KEY"
+````
+Validated:
+````
+curl -g "https://api.authy.com/protected/json/reporting/date_histogram?report[phone_verification_code_is_valid][event][eq]=phone_verification_code_is_valid&interval=hour&page=$REPORTING_PAGE" \
+-H "X-Authy-API-Key: $REPORTING_AUTHY_API_KEY"
+````
+Samples:
+
+https://github.com/AuthySE/Authy-Reporting-Samples
+
+## Getting Started with Development
+
 To get started, start with Phone Verification:
 
     Create a Twilio account, a free Trial works fine (https://twilio.com/console).
