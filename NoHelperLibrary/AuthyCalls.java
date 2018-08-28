@@ -51,7 +51,7 @@ public class AuthyCalls {
         params.add(new BasicNameValuePair("via", paramVia));
         params.add(new BasicNameValuePair("country_code", paramCountryCode));
         params.add(new BasicNameValuePair("phone_number", paramPhoneNumber));
-        // System.out.println("+ Request: '" + theRequest);
+        System.out.println("+ Request: '" + theRequest);
         try {
             theResponse = HTTPS_REQUEST.doPost(theRequest, params);
         } catch (Exception ex) {
